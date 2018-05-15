@@ -28,7 +28,7 @@
         function afficheParoles(paroles) {
             choixMusiques.style.display = "none";
             affichageParoles.style.display = "block";
-            lblParoles.innerHTML = paroles;
+            lblParoles.innerHTML = paroles.replace(/[\n\r]/g, '<br/>');
         }
 
         function randomMusic() {
