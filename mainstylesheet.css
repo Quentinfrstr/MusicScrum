@@ -1,0 +1,25 @@
+*{
+	font-family: 'Kavivanar', cursive;
+	color: white;
+	margin: auto;
+}
+body{
+	background-color: #10314A;
+	text-align: center;
+}
+#maintitre{
+	margin-top: 2%;
+	font-size: 6rem;
+}
+#btn{
+	background-color: #83BDC5;
+	font-size: 2rem;
+	
+}
+ul{
+	margin-top: 15%;
+	list-style-type: none;
+}
+li{
+	margin-bottom: 1%;
+}
