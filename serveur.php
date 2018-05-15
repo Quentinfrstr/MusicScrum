@@ -14,10 +14,10 @@ if($_POST['fonction'] == 'randomMusic'){
     
     for($i = 0; $i < 3; $i++){
         $numChanson = rand(0, count($infos));
-        $result .= $infos[$numChanson]['titre'] . ';' .$infos[$numChanson]['paroles']. '|';
+        $result .= $infos[$numChanson]['titre'] . ';' . $infos[$numChanson]['paroles']. '|';
     }
     
-    echo $result;
+    echo utf8_encode($result);
     
 }
 

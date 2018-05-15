@@ -2,13 +2,14 @@
 <html lang="fr">
 
 <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Musical Blind-Test</title>
+    
 </head>
 
 <body onload="init()">
     <div id="choixMusiques">
-        
+
     </div>
     <div id="affichageParoles">
         <label id="lblParoles">
@@ -55,8 +56,8 @@
                 }
             });
         }
-        
-        function init(){
+
+        function init() {
             randomMusic();
         }
 
