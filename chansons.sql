@@ -1,9 +1,9 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.1.4
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 11 Mai 2018 à 10:59
+-- Généré le :  Mar 15 Mai 2018 à 13:43
 -- Version du serveur :  5.6.15-log
 -- Version de PHP :  5.4.24
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `musique`
 --
+CREATE DATABASE IF NOT EXISTS `musique` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
+USE `musique`;
 
 -- --------------------------------------------------------
 
@@ -26,6 +28,7 @@ SET time_zone = "+00:00";
 -- Structure de la table `chansons`
 --
 
+DROP TABLE IF EXISTS `chansons`;
 CREATE TABLE IF NOT EXISTS `chansons` (
   `id_Chanson` int(11) NOT NULL AUTO_INCREMENT,
   `titre` varchar(100) COLLATE utf8_bin NOT NULL,
