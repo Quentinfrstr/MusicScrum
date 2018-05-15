@@ -11,10 +11,11 @@ $.ajax({
             var infos = ligne[i].split(';');
             var btn = document.createElement('button');
             btn.innerHTML = infos[0];
-            btn.id = infos[1];
+            btn.paroles = infos[1];
+            btn.id = btn + i;
             btn.onclick = function() {
                             nomMusique = this.innerHTML;
-                            afficheMusiques(this.id);
+                            afficheMusiques(this.paroles);
                         }
             document.getElementById('choixMusiques').appendChild(btn);
         }
