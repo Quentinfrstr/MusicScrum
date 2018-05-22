@@ -1,25 +1,47 @@
+@font-face{
+    font-family: "luckiest-guy";
+    src: url(./LuckiestGuy.ttf);
+}
+
 *{
-	font-family: 'Kavivanar', cursive;
+	font-family: 'luckiest-guy', cursive;
 	color: white;
 	margin: auto;
+	user-select: none; /* Standard */
 }
 body{
-	background-color: #10314A;
+	background-color: #FFFFFF;
 	text-align: center;
 }
-#maintitre{
-	margin-top: 2%;
-	font-size: 6rem;
-}
 #btn{
-	background-color: #83BDC5;
-	font-size: 2rem;
-	
+	background-color: #1EF2F1;
+	font-size: 2.5vw;
+	border: none;
+	color: #000000;
+}
+#btn:hover{
+	background-color: #F6050A;
+	color: #FFFFFF;
 }
 ul{
-	margin-top: 15%;
+	margin-top: 10%;
 	list-style-type: none;
 }
 li{
 	margin-bottom: 1%;
+}
+h1 {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: none;
+  font: normal 55px/normal "luckiest-guy", Helvetica, sans-serif;
+  color: rgb(51, 51, 51);
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  letter-spacing: 3px;
+  text-shadow: -3px 0 1px rgb(30,242,241) , 3px 0 1px rgb(246,5,10) ;
+  margin-top: 3%;
+	font-size: 7vw;
 }
