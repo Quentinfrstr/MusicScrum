@@ -6,15 +6,14 @@ try{
     echo 'Connexion échoué';
 }
 
-if($_POST['fonction'] == 'randomMusic'){
+if($_POST['fonction'] == 'loadMusic'){
     $infos = $bdd->query('SELECT titre, paroles, auteur FROM chansons');
     $infos = $infos->fetchAll();
     
     $result = "";
     
-    for($i = 0; $i < 3; $i++){
-        $numChanson = rand(0, count($infos));
-        $result .= $infos[$numChanson]['titre'] . ';' . $infos[$numChanson]['paroles'] . ';' . $infos[$numChanson]['auteur'] . '|' ;
+    for($i = 0; $i < count($infos); $i++){
+        $result .= $infos[$i]['titre'] . ';' . $infos[$i]['auteur'] . ';' . $infos[$i]['paroles']. '|';
     }
     
     echo utf8_encode($result);

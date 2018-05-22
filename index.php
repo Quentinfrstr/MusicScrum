@@ -28,6 +28,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript">
         // Intialisation des variables
+
         var _MAX_TEMPS = 30;
         var _INTERVAL = 1;
         var temps = 0;
@@ -41,34 +42,20 @@
             choixMusiques.style.display = "none";
             affichageParoles.style.display = "block";
             lblParoles.innerHTML = paroles.replace(/[\n\r]/g, '<br/>');
-            lblParoles.innerHTML = paroles;
             timer = setInterval(SelectionChanson, _INTERVAL * 1000);
         }
 
-        function randomMusic() {
-            temps = 0;
+        function loadMusic() {
             $.ajax({
                 url: "./serveur.php",
                 type: "POST",
                 data: ({
-                    fonction: 'randomMusic'
+                    fonction: 'loadMusic'
                 }),
                 dataType: 'text',
                 success: function(reponse) {
-                    var ligne = reponse.split('|');
-                    for (var i = 0; i < ligne.length - 1; i++) {
-                        var infos = ligne[i].split(';');
-                        var btn = document.createElement('button');
-                        btn.innerHTML = infos[0] + " - " + infos[2];
-                        btn.paroles = infos[1];
-                        btn.id = "btn";
-						btn.className = "btn btn-primary btn-lg active";
-                        btn.onclick = function() {
-                            nomMusique = this.innerHTML;
-                            afficheParoles(this.paroles);
-                        }
-                        document.getElementById('choixMusiques').appendChild(btn);
-                    }
+                    localStorage.setItem('musicScrum', reponse);
+                    localStorage.setItem('musicScrum_lastEntry', getDate());
                 }
             });
         }
@@ -91,7 +78,47 @@
         }
 
         function init() {
-            randomMusic();
+            loadMusic();
+            loadGame();
+        }
+
+        function getDate(){
+            var today = new Date();
+            var dd = today.getDate();
+            var mm = today.getMonth() + 1; //January is 0!
+            var yyyy = today.getFullYear();
+
+            if (dd < 10) {
+                dd = '0' + dd
+            }
+
+            if (mm < 10) {
+                mm = '0' + mm
+            }
+
+            today = mm + '/' + dd + '/' + yyyy;
+            return today;
+        }
+        
+        function loadGame() {
+            var chansons = localStorage.getItem('musicScrum');
+            chansons = chansons.split('|'):
+            for(var i = 0; i < 3; i++){
+                var musiqueRandom = Math.random(0,chansons.length);
+                var infos = chansons[musiqueRandom].split(';');
+                var btn = document.createElement('button');
+                btn.innerHTML = infos[0];
+                btn.paroles = infos[2];
+                btn.id = "btn";
+                btn.className = "btn btn-primary btn-lg active";
+                btn.onclick = function(){
+                    nomMusique = this.innerHTML;
+                    afficheParoles(this.paroles);
+                }
+                
+                document.getElementById("choixMusiques").appendChild(btn);
+                choixMusiques.innerHTML += "<br>";
+            }
         }
 
     </script>
