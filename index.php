@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Musical Blind-Test</title>
-    
+
 </head>
 
 <body onload="init()">
@@ -16,10 +16,18 @@
                 
         </label>
     </div>
+    <div id="temps">
+        <label id=tempsRestant>
+            
+        </label>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript">
         // Intialisation des variables
-
+        var _MAX_TEMPS = 30;
+        var _INTERVAL = 1;
+        var temps = 0;
+        var timer;
 
         // Fonctions
 
@@ -29,9 +37,12 @@
             choixMusiques.style.display = "none";
             affichageParoles.style.display = "block";
             lblParoles.innerHTML = paroles.replace(/[\n\r]/g, '<br/>');
+            lblParoles.innerHTML = paroles;
+            timer = setInterval(SelectionChanson, _INTERVAL * 1000);
         }
 
         function randomMusic() {
+            temps = 0;
             $.ajax({
                 url: "./serveur.php",
                 type: "POST",
@@ -55,6 +66,23 @@
                     }
                 }
             });
+        }
+
+        function SelectionChanson() {
+            
+            tempsRestant.innerHTML = temps.toString();
+            if (temps == 5) {
+                choixMusiques.innerHTML = "";
+                randomMusic();
+                choixMusiques.style.display = "block";
+                affichageParoles.style.display = "none";
+                clearInterval(timer);
+                
+            }
+
+
+            temps++;
+
         }
 
         function init() {
