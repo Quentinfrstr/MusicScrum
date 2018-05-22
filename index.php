@@ -68,19 +68,19 @@
             });
         }
 
-        function SelectionChanson() {
+        function SelectionChanson() 
+        {
+            tempsRestant.innerHTML = _MAX_TEMPS - temps;
             
-            tempsRestant.innerHTML = temps.toString();
-            if (temps == 5) {
+            if (temps == _MAX_TEMPS) {
                 choixMusiques.innerHTML = "";
                 randomMusic();
                 choixMusiques.style.display = "block";
                 affichageParoles.style.display = "none";
                 clearInterval(timer);
-                
+                tempsRestant.innerHTML = "";
             }
-
-
+            
             temps++;
 
         }
