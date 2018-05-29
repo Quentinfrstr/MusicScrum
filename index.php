@@ -112,15 +112,16 @@
                 btn.paroles = infos[2];
                 btn.id = "btn";
                 btn.className = "btn btn-primary btn-lg active";
-                btn.onclick = function(){
-                    nomMusique = this.innerHTML;
-                    afficheParoles(this.paroles);
-                }
+				btn.setAttribute( "onClick", "javascript: test(\""+btn.innerHTML+"\", `"+btn.paroles+"`);");
                 
                 document.getElementById("choixMusiques").appendChild(btn);
                 choixMusiques.innerHTML += "<br>";
             }
         }
+		function test(musique, paroles){
+                    var nomMusique = musique;
+                    afficheParoles(paroles);
+                }
 
     </script>
 </body>
