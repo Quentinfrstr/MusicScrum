@@ -1,9 +1,9 @@
-﻿-- phpMyAdmin SQL Dump
+-- phpMyAdmin SQL Dump
 -- version 4.1.4
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 15 Mai 2018 à 13:43
+-- Généré le :  Mar 29 Mai 2018 à 09:43
 -- Version du serveur :  5.6.15-log
 -- Version de PHP :  5.4.24
 
@@ -78,7 +78,7 @@ INSERT INTO `chansons` (`id_Chanson`, `titre`, `auteur`, `paroles`) VALUES
 (34, 'Je l''aime à mourir', 'Francis Cabrel', 'Elle a dû faire toutes les guerres\r\nPour être si forte aujourd''hui\r\nElle a dû faire toutes les guerres\r\nDe la vie, et l''amour aussi'),
 (35, 'La jument de Michao', 'Nolwenn Leroy', 'C''est dans dix ans je m''en irai\r\nJ''entends le loup et le renard chanter\r\nJ''entends le loup, le renard et la belette\r\nJ''entends le loup et le renard chanter\r\nC''est dans neuf ans je m''en irai\r\nLa jument de Michao a passé dans le pré\r\nLa jument de Michao et son petit poulain\r\nA passé dans le pré et mangé tout le foin'),
 (36, 'Le lion est mort ce soir', 'Pow woW', 'Dans la jungle, terrible jungle\r\nLe lion est mort ce soir\r\nEt les hommes tranquilles s''endorment\r\nLe lion est mort ce soir'),
-(37, 'Tob Album', 'Mister V', 'Nique sa mère si j''finis pas dans le top album\r\nY''a que du commercial dans le top album\r\nMa musique est trop bien pour le top album\r\nMais bon c''est relou si j''suis pas top album'),
+(37, 'Top Album', 'Mister V', 'Nique sa mère si j''finis pas dans le top album\r\nY''a que du commercial dans le top album\r\nMa musique est trop bien pour le top album\r\nMais bon c''est relou si j''suis pas top album'),
 (38, 'Prendre un enfant', 'Yves Duteil', 'Prendre un enfant par la main \r\nEt lui chanter des refrains \r\nPour qu''il s''endorme à la tombée du jour, \r\nPrendre un enfant par l''amour. '),
 (39, 'Siffler sur la colline', 'Joe Dassins', 'Elle m''a dit:\r\nElle m''a dit d''aller siffler là-haut sur la colinne,\r\nDe l''attendre avec un petit bouquet d''églantines.\r\nJ''ai cueuilli des fleurs et j''ai sifflé tant que j''ai pu, j''ai attendu attendu elle n''est jamais venu!\r\nZaî zaî zaî zaî! Zaî zaî zaî zaî! Zaî zaî zaî! Zaî zaî zaî zaî!'),
 (40, 'Sur le pont d''Avignon', '?', 'Sur le pont d’Avignon, \r\nL’on y danse, l’on y danse, \r\nSur le pont d’Avignon \r\nL’on y danse tout en rond. \r\nLes belles dames font comme ça \r\nEt puis encore comme ça. \r\nSur le pont d’Avignon '),
@@ -96,13 +96,13 @@ INSERT INTO `chansons` (`id_Chanson`, `titre`, `auteur`, `paroles`) VALUES
 (52, 'Envole-moi', 'Jean-Jacques Goldman', 'Envole-moi\r\nEnvole-moi\r\nEnvole-moi \r\nLoin de cette fatalité qui colle à  ma peau \r\nEnvole-moi\r\nEnvole-moi\r\nRemplis ma tête d''autres horizons, d''autres mots \r\nEnvole-moi '),
 (53, 'Générique Pokemon', 'Pokemon', 'Pokémon\r\nAttrapez-les tous \r\nC''est notre histoire \r\nEnsemble pour la victoire \r\nPokémon \r\nRien ne nous arrêtera\r\nNotre amitié triomphera \r\nPokémon attrapez-les tous \r\nMême à notre âge\r\nUn voyage d''apprentissage \r\nÇa demande du courage \r\nPokémon !\r\nAttrapez-les tous \r\nAttrapez-les tous '),
 (54, 'Marly-Gomont', 'Kamini', 'J''viens pas d''la cité,\r\nMais le beat est bon,\r\nJ''viens pas d''Panam,\r\nMais d''Marly Gaumont\r\n\r\nY''a pas d''bitume là bas,\r\nC''est qu''des pâtures,\r\nmais c''là n''empêche que j''ai croisé pas mal d''ordures.'),
-(55, 'Kyo', 'Dernière danse', 'Je veux juste une dernière danse\r\nAvant l''ombre et l''indifférence\r\nUn vertige puis le silence\r\nJe veux juste une dernière danse'),
-(56, 'Dernière Danse', 'Indila', 'Je remue le ciel le jour, la nuit\r\nJe danse avec le vent la pluie\r\nUn peu d''amour un brin de miel\r\nEt je danse, danse, danse, danse, danse, danse, danse\r\nEt dans le bruit, je cours et j''ai peur\r\nEst-ce mon tour?\r\nVient la douleur\r\nDans tout Paris, je m''abandonne\r\nEt je m''envole, vole, vole, vole, vole, vole'),
-(57, 'Indila', 'Tourner Dans Le Vide', 'Tourner dans le vide, vide \r\nTourner dans le vide, vide \r\nTourner dans le vide, il me fait tourner \r\nDans le vide, vide, vide \r\nTourner, tourner dans le vide \r\nTourner dans le vide, il me fait tourner'),
+(55, 'Dernière danse', 'Kyo', 'Je veux juste une dernière danse\r\nAvant l''ombre et l''indifférence\r\nUn vertige puis le silence\r\nJe veux juste une dernière danse'),
+(56, 'Dernière Danse ', 'Indila', 'Je remue le ciel le jour, la nuit\r\nJe danse avec le vent la pluie\r\nUn peu d''amour un brin de miel\r\nEt je danse, danse, danse, danse, danse, danse, danse\r\nEt dans le bruit, je cours et j''ai peur\r\nEst-ce mon tour?\r\nVient la douleur\r\nDans tout Paris, je m''abandonne\r\nEt je m''envole, vole, vole, vole, vole, vole'),
+(57, 'Tourner Dans Le Vide', 'Indila', 'Tourner dans le vide, vide \r\nTourner dans le vide, vide \r\nTourner dans le vide, il me fait tourner \r\nDans le vide, vide, vide \r\nTourner, tourner dans le vide \r\nTourner dans le vide, il me fait tourner'),
 (58, 'Elle Me Dit', 'Mika', 'Pourquoi tu gâches ta vie\r\nPourquoi tu gâches ta vie\r\nPourquoi tu gâches ta vie\r\nDanse danse danse, elle me dit\r\nPourquoi tu gâches ta vie\r\nPourquoi tu gâches ta vie\r\nPourquoi tu gâches ta vie\r\nDanse danse danse'),
 (59, 'Carmen', 'Stromae', 'Prends garde à toi\r\nSi tu t’aimes\r\nGarde à moi\r\nSi je m’aime\r\nGarde à nous, garde à eux, garde à vous\r\nEt puis chacun pour soi\r\nEt c’est comme ça qu’on s’aime, s’aime, s’aime, s’aime\r\nComme ça, consomme, somme, somme, somme, somme'),
-(60, 'Bigflo & Oli', 'Pour un pote', 'J''pourrais sortir le katana, pour un pote\r\nDormir avec des piranhas, pour un pote\r\nOuvrir un bar dans l''Sahara, pour un pote\r\nLui dire ça va si ça va pas, pour un pote\r\nPrendre le premier avion pour Rio, pour un pote\r\nLui garder un rein dans le frigo, pour un pote\r\nJ''pourrais faire l''tour de la Terre, mentir à sa mère\r\nJ''pourrais, j''pourrais, j''pourrais, click click brah'),
-(61, 'OrelSan', 'La pluie', 'Toujours autant d''pluie chez moi \r\nToujours autant d''pluie chez moi \r\nMais il fait quand même beau, il fait beau \r\nIl fait beau, il fait beau \r\nChez moi, il fait beau, il fait beau \r\nIl fait beau, il fait beau \r\nChez moi, il fait beau'),
+(60, 'Pour un pote', 'Bigflo & Oli', 'J''pourrais sortir le katana, pour un pote\r\nDormir avec des piranhas, pour un pote\r\nOuvrir un bar dans l''Sahara, pour un pote\r\nLui dire ça va si ça va pas, pour un pote\r\nPrendre le premier avion pour Rio, pour un pote\r\nLui garder un rein dans le frigo, pour un pote\r\nJ''pourrais faire l''tour de la Terre, mentir à sa mère\r\nJ''pourrais, j''pourrais, j''pourrais, click click brah'),
+(61, 'La pluie', 'OrelSan', 'Toujours autant d''pluie chez moi \r\nToujours autant d''pluie chez moi \r\nMais il fait quand même beau, il fait beau \r\nIl fait beau, il fait beau \r\nChez moi, il fait beau, il fait beau \r\nIl fait beau, il fait beau \r\nChez moi, il fait beau'),
 (62, 'A Tout Le Monde', 'Megadeth', 'A tous le monde\r\nA tous les amis\r\nJe vous aime\r\nJe dois partir');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
