@@ -102,10 +102,11 @@
         
         function loadGame() {
             var chansons = localStorage.getItem('musicScrum');
-            chansons = chansons.split('|'):
+            chansons = chansons.split('|');
             for(var i = 0; i < 3; i++){
                 var musiqueRandom = Math.random(0,chansons.length);
-                var infos = chansons[musiqueRandom].split(';');
+				//Split les infos du titre
+                var infos = chansons[Math.floor(Math.random()*chansons.length)].split(';');
                 var btn = document.createElement('button');
                 btn.innerHTML = infos[0];
                 btn.paroles = infos[2];
